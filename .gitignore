@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Editor / OS junk
+*.swp
+*.swo
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python virtualenvs (all common names)
+.venv/
+venv/
+env/
+ENV/
+.env
+*.env
+
+# ---- Cloudinary ----
+# Credentials (API key + secret) — never commit.
+.cloudinary
+
+# ---- Talk media ----
+# Originals are uploaded to Cloudinary via `python3 sync.py --upload` and
+# served from there. Keep them locally as your backup source, but don't bloat
+# the repo. The manifest.json (small JSON with filename → public_id) IS
+# committed so the site can build without local files present.
+talks/images+videos/*
+!talks/images+videos/README.md
+!talks/images+videos/manifest.json

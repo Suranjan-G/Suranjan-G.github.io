@@ -1,0 +1,72 @@
+{
+  "1773829386577.jpeg": {
+    "kind": "image",
+    "public_id": "talks/1773829386577",
+    "sha256": "73c74bc565b1e9153f9ca06de247ff9b0d27d23a789b27d1a469904eec35ec15"
+  },
+  "DSC00943.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC00943",
+    "sha256": "2d5b10bf9de7057bc4b92224a5956fcf81f26d0b70c8f5ea89391b9791ae57ab"
+  },
+  "DSC00946.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC00946",
+    "sha256": "7a2d4dd94b8f620f67c18c8bb634b657652f2b70b8761d56b56535b55caf4117"
+  },
+  "DSC00948.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC00948",
+    "sha256": "fcecbbc7930fc5da8327661504b08b9a499ef078ad9fcc7cc7a42a9711e600d7"
+  },
+  "DSC00972.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC00972",
+    "sha256": "04758f932be8fedcd41e8a4a9e5d88baa86eb5a2ffd052296900958c653253bf"
+  },
+  "DSC01639.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC01639",
+    "sha256": "91d57d4bc89a4da01b8a2b025656a40be7bc57018cc1a40436b9829ccc1cb594"
+  },
+  "DSC01643.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC01643",
+    "sha256": "104b81fd445847ad225f0e9140d011c64bc7cecc3951d4e382661437575a895f"
+  },
+  "DSC01651.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC01651",
+    "sha256": "87ba0b31fb346da1e306d80211271589812218e8736b7463e6b11e53db394957"
+  },
+  "DSC01654.JPG": {
+    "kind": "image",
+    "public_id": "talks/DSC01654",
+    "sha256": "9804ccafa3799222495384351068366fb93de5b6f0d35195a5da2b46400e20b3"
+  },
+  "IMG_2991.HEIC": {
+    "kind": "image",
+    "public_id": "talks/IMG_2991",
+    "sha256": "4406aae5874766004a71a504901d023afbd1cfccfc701e2c7acd3ce7db0db912"
+  },
+  "IMG_3003.HEIC": {
+    "kind": "image",
+    "public_id": "talks/IMG_3003",
+    "sha256": "c9b4592453ffb7b39315790f7565f05b3c1c05305d3aad91c8f401183714f0af"
+  },
+  "IMG_3038.HEIC": {
+    "kind": "image",
+    "public_id": "talks/IMG_3038",
+    "sha256": "ea6ba7c6d1fd1c78b2ef7bb86554848185e086f2d6951b1269524f9e3ec948c6"
+  },
+  "IMG_3042.HEIC": {
+    "kind": "image",
+    "public_id": "talks/IMG_3042",
+    "sha256": "41658b32facfe154544de256c54160008689b22e079cbefa24a972b7a425e8ed"
+  },
+  "IMG_3051.HEIC": {
+    "kind": "image",
+    "public_id": "talks/IMG_3051",
+    "sha256": "a61e8c20c61d037cd86530a773e90efedce77833b2c734683253acba723c9d90"
+  }
+}

@@ -1,0 +1,59 @@
+# Publications — one block per entry. Top of file = most prominent / recent.
+#
+# type              highlight | paper | dataset
+#                     highlight → sits in the "Highlighted" section at top
+#                     paper     → sits in "Journal & conference papers"
+#                     dataset   → sits in "Open datasets"
+# title             Full title of the paper / dataset
+# citation          Author list, venue, year (inline _italic_ for venue names)
+# primary_badge     For highlights only — the primary colored badge (e.g. "A*", "IF: 14.7")
+# muted_badge       For highlights only — the outlined muted badge (e.g. "ICLR 2026")
+
+---
+type: highlight
+primary_badge: A*
+muted_badge: ICLR 2026
+title: IndicVisionBench: Benchmarking Cultural and Multilingual Understanding in VLMs
+citation: A* ICLR publication, 2026.
+
+---
+type: highlight
+primary_badge: IF: 14.7
+muted_badge: Information Fusion
+title: An image information fusion based simple diffusion network leveraging the segment anything model for guided attention on thermal images producing colorized pedestrian masks
+citation: Goswami, Suranjan, and Satish Kumar Singh. _Information Fusion_ 113 (2025): 102618.
+
+---
+type: paper
+title: A simple deep learning based image illumination correction method for paintings
+citation: Goswami, Suranjan, and Satish Kumar Singh. _Pattern Recognition Letters_ 138 (2020): 392–396. (IF: 3.9)
+
+---
+type: paper
+title: A Novel Deep Learning Method for Thermal to Annotated Thermal-Optical Fused Images
+citation: Goswami, Suranjan (IEEE Member), Satish Kumar Singh, and Bidyut B. Chaudhuri. CVIP 2022, Part I, CCIS 1776. ISBN 978-3-031-31406-3.
+
+---
+type: paper
+title: A Simple Mutual Information based Registration Method for Thermal-Optical Image Pairs applied on a Novel Dataset
+citation: Goswami, Suranjan, and Satish Kumar Singh. 3rd International Conference for Emerging Technology (INCET), 2022.
+
+---
+type: paper
+title: Opti-Enc: On the Path to the Optimal Encoder-Decoder for Thermal Image Colorization for Cross Domain Colorized Images
+citation: Goswami, Suranjan, and Satish Kumar Singh. arXiv preprint arXiv:2101.06910 (2021).
+
+---
+type: dataset
+title: Tight Masks for KAIST thermal pedestrian images
+citation: Goswami, Suranjan, and Satish Kumar Singh. IEEE Dataport, 2024. doi: [10.1016/j.inffus.2024.102618](https://doi.org/10.1016/j.inffus.2024.102618)
+
+---
+type: dataset
+title: Thermal Visual Paired Dataset
+citation: Goswami, Suranjan, Nand Kumar Yadav, and Satish Kumar Singh. IEEE Dataport, 2021. doi: [10.21227/jjba-6220](https://dx.doi.org/10.21227/jjba-6220)
+
+---
+type: dataset
+title: Thermal Optical Annotated Multi Class Image Dataset
+citation: Goswami, Suranjan, Satish Kumar Singh, and Bidyut Baran Chaudhuri. IEEE Dataport, 2021. doi: [10.21227/80yz-h738](https://dx.doi.org/10.21227/80yz-h738)

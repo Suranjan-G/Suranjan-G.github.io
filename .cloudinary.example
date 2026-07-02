@@ -1,0 +1,13 @@
+# Cloudinary credentials — copy this file to `.cloudinary` (same dir)
+# and fill in the real values from your Cloudinary dashboard:
+#   https://console.cloudinary.com/  →  Dashboard  →  API Keys
+#
+# `.cloudinary` is gitignored — never commit it. `.cloudinary.example` (this
+# file) is committed as a template so anyone forking the repo knows the format.
+#
+# The CLOUDINARY_CLOUD_NAME is public and is normally hardcoded near the top
+# of sync.py; setting it here as a fallback is also fine.
+
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=1234567890
+CLOUDINARY_API_SECRET=abcdefghijklmnopqrstuvwxyz

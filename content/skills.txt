@@ -1,0 +1,46 @@
+# Skills — one block per group (Domains, Tools, Hardware, etc.).
+#
+# heading: Group name (shown as <h3>)
+# tags:    Bulleted list of skill tags (pill-shaped chips)
+
+---
+heading: Domains
+tags:
+  - Computer Vision
+  - Machine Learning
+  - Deep Learning
+  - Generative AI
+  - Agentic AI
+  - 3D Vision
+  - Multi-Spectral Imaging
+  - Point Cloud Registration
+  - LLM / VLM / RAG
+
+---
+heading: Tools & platforms
+tags:
+  - Python
+  - Java
+  - C / C++
+  - MATLAB
+  - TensorFlow
+  - PyTorch
+  - NumPy
+  - Llama
+  - SAM
+  - ViT
+  - Stable Diffusion
+  - Distillation
+  - Quantization
+  - Label Studio
+
+---
+heading: Hardware & instrumentation
+tags:
+  - R12i GNSS receiver
+  - Microsoft HoloLens
+  - X9 3D scanner
+  - 3D Structured Light
+  - 6DOF Robot manipulation
+  - Camera Calibration
+  - Industrial Vision platforms

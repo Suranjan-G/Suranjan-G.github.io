@@ -1,0 +1,11 @@
+# Selected projects — single-block file, one bullet per project.
+#
+# Rendered as a bulleted list on the Experience page. Inline formatting works.
+
+items:
+  - Thermal–RGB fused odometry
+  - XR-based 3D BIM registration algorithm (Trimble Hackathon global winner, 2022)
+  - 3D vision systems for small-part and weld/hole error detection at micrometer-level accuracy
+  - 3D gantry-based system for wirebond inspection
+  - Ola automated dark store — 6DOF robot pick-and-place and optimal product storage system
+  - Vision systems for error detection in dry/wet electrodes for battery manufacturing

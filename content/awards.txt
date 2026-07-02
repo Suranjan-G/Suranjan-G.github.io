@@ -1,0 +1,25 @@
+# Awards, certificates, and hobbies (single-block file).
+#
+# awards: bulleted list. Prefix an item with `!TAG ` (e.g. `!A* `) to render
+#         TAG as a solid navy badge to the left of the text.
+# certificates: bulleted list.
+# hobbies: single line (comma-separated is fine).
+
+awards:
+  - !A* Publication at ICLR 2026
+  - Young Alumnus Award 2024 — IEM Kolkata
+  - Global winner, 2022 Trimble Hackathon — XR-based 3D BIM registration system (from 250 teams)
+  - East India Finalist, FameLab 2016–17 — British Council India, in association with Cheltenham Festival, UK
+  - Expert Author Certificate — EzineArticles.com
+  - Certificate in German Communicative Course — Ramakrishna Mission Institute of Culture, Kolkata
+  - First division and Distinction in Violin — Pracheen Kala Kendra, India
+  - Certificate of Merit — over 90% marks in ISC Exam
+
+certificates:
+  - 2023 — Introduction to Generative AI Studio, Google Cloud
+  - 2016 — Trainee, Machine Learning, ISI Kolkata
+  - 2013 — J2EE with Oracle 10G, Oriens Infotech
+  - 2012 — Advanced Java project, HCL Infosystems
+  - 2010 — Data Structures & Algorithms, IBM
+
+hobbies: Reading, travelling, and Booktubing.

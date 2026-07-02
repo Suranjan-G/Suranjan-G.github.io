@@ -1,0 +1,68 @@
+# Profile — global site info (name, tagline, bios, contact, home highlights)
+#
+# One-block file. Fields with `_list:` (colon followed by nothing) open a list;
+# subsequent indented `- item` lines are items. Blank line ends a list.
+#
+# Inline formatting in ANY text field:
+#     **bold**        → bold text
+#     _italic_        → italic text
+#     ==highlight==   → yellow-highlight span (matches CV theme)
+#     [text](url)     → hyperlink
+
+name: Suranjan Goswami
+tagline: AI & Computer Vision Researcher · PhD, IIIT Allahabad
+
+# ---- Home page ----
+home_title: Suranjan Goswami — AI & Computer Vision Researcher
+home_description: Suranjan Goswami — PhD, AI and Computer Vision researcher. Research Scientist at Nasiko. Agentic AI, 3D vision, thermal image processing. A* ICLR 2026 publication.
+hero_intro: Research Scientist at Nasiko, working on Agentic AI orchestration, observability, and explainability. Previously Senior Research Engineer at Ola Electric (Kruti pipeline; 3D vision for factory automation) and Computer Vision Engineer at Trimble. My PhD focused on thermal image processing, colorization, and generative models.
+hero_recent: Recent: ==A* publication at ICLR 2026== — _IndicVisionBench: Benchmarking Cultural and Multilingual Understanding in VLMs_ — and an _Information Fusion_ 2025 paper (IF: 14.7) on a diffusion-based network for thermal pedestrian colorization.
+
+# ---- About page ----
+about_description: About Suranjan Goswami — AI & Computer Vision researcher, PhD from IIIT Allahabad. Background, education, awards, and hobbies.
+about_lead: AI & Computer Vision researcher. PhD from IIIT Allahabad. Currently at Nasiko.
+about_summary: I'm an AI and Computer Vision researcher with a PhD from the Indian Institute of Information Technology, Allahabad. My work spans deep learning vision platforms — from thermal image colorization and 3D point cloud registration to agentic AI orchestration. I'm particularly focused on enhancing performance and efficiency in vision-driven and multi-agent systems, and I've published in venues including ICLR (A*) and _Information Fusion_.
+
+# One paragraph per bullet — each rendered as a <p> on the About page
+about_trajectory:
+  - I started research at the **Defence Research and Development Organization (DRDO)** as a Junior Research Fellow in 2014, working with statisticians and psychologists at DIPR on evaluation platforms. After an M.Tech in Computer Science from IEM Kolkata, I returned to DRDO as a Senior Research Fellow, delivering illumination normalization and thermal image colorization modules under grant 2535/DIPR-II/MD/CARS-01, and publishing across SCI journals and international conferences.
+  - At **Trimble**, I moved into industrial computer vision — multi-spectral odometry, 3D point cloud registration, and XR-based digital twin registration (winning the global 2022 Trimble Hackathon out of 250 teams). At **Ola Electric**, I led vision and ML work for the Kruti pipeline and the Ola Future Factory automation stack — micron-level 3D deviation detection, 6DOF pick-and-place for dark warehouses, and battery-line quality inspection.
+  - I currently work as a **Research Scientist at Nasiko**, focused on agentic AI research and development — routing frameworks for orchestration, observability and explainability layers for A2A compliance, and cost-bound token strategies for agent usage.
+
+# ---- Experience page ----
+experience_description: Suranjan Goswami's work experience — Nasiko, Ola Electric, Trimble, DRDO. Agentic AI, 3D vision, multi-spectral odometry, thermal imaging.
+experience_lead: A decade across DRDO, Trimble, Ola Electric, and Nasiko — spanning image processing research, industrial 3D vision, and agentic AI.
+
+# ---- Publications page ----
+publications_description: Publications by Suranjan Goswami — ICLR 2026 (A*), Information Fusion 2025 (IF: 14.7), Pattern Recognition Letters 2020, and IEEE Dataport releases.
+publications_lead: Peer-reviewed papers, conference publications, and open datasets. Also on [Google Scholar](https://scholar.google.com/citations?user=N1s3fL4AAAAJ&hl=en).
+
+# ---- Talks page ----
+talks_description: Talks, invited lectures, and judging appearances by Suranjan Goswami.
+talks_lead: Invited talks, conference presentations, and events where I served as a judge.
+
+# ---- Contact links (used on every page footer, home hero, etc.) ----
+email: suranjan_arcade@yahoo.co.in
+linkedin: https://www.linkedin.com/in/suranjan-goswami/
+scholar: https://scholar.google.com/citations?user=N1s3fL4AAAAJ&hl=en
+dataport: https://ieee-dataport.org/authors/suranjan-goswami
+
+# ---- Home page "Selected highlights" (bulleted list) ----
+highlights:
+  - **A* publication, ICLR 2026** — _IndicVisionBench_, benchmarking cultural and multilingual understanding in VLMs.
+  - **Information Fusion, 2025** — Diffusion network with Segment Anything for guided thermal pedestrian colorization (IF: 14.7).
+  - **Global winner, Trimble Hackathon 2022** — XR-based 3D BIM registration system, from among 250 teams.
+  - **Young Alumnus Award 2024** — IEM Kolkata.
+  - **DRDO grant delivery** — Illumination normalization & thermal image colorization modules under grant 2535/DIPR-II/MD/CARS-01.
+
+# ---- Home page "Research interests" (skill-tag pills) ----
+interests:
+  - Computer Vision
+  - Thermal Image Processing
+  - Colorization
+  - Deep Learning
+  - Image Enhancement
+  - 3D Vision
+  - Vision Language Models
+  - Action Models
+  - Agentic AI

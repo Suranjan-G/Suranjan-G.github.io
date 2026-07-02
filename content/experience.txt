@@ -1,0 +1,65 @@
+# Experience — one block per job. Top of file = most recent.
+#
+# Fields per job:
+#   title       Job title
+#   org         Organization name
+#   dates       e.g. "04/2026 – Present" or "11/2023 – 03/2026"
+#   bullets     Bulleted responsibilities (list; inline formatting supported)
+#   sub_bullets Optional nested bullets — rendered under the LAST item in bullets
+
+---
+title: Research Scientist
+org: Nasiko
+dates: 04/2026 – Present
+bullets:
+  - Agentic AI research and development, with multiple publications
+  - Routing agent framework for the Agentic AI orchestration layer
+  - Developed the observability and explainability layer for A2A compliance and connections
+  - Cost-bound token strategy for agent usage
+
+---
+title: Senior Research Engineer
+org: Ola Electric
+dates: 11/2023 – 03/2026
+bullets:
+  - LLM/VLM and agentic AI development for the Kruti pipeline
+  - AI-based path planning for optimal storage and route planning in dark warehouses
+  - Camera-based generalized pick-and-place with a 6DOF robot
+  - Vision pipeline for integrated automation of mechanical tasks at Ola Future Factory
+sub_bullets:
+  - 3D point cloud registration and stitching using a Cobot, via feature- and coordinate-based approaches
+  - 3D small-part deviation detection via a custom iterative statistical algorithm
+  - Sparse feature-based point cloud alignment using multiple structured light sources — micron-level accuracy for chassis hole deviation on vehicle frames
+  - Stereo-camera vision pipeline for deviation detection in Ola battery palettes
+  - Small part quality control module
+  - Weld line inspection module
+
+---
+title: Computer Vision Engineer
+org: Trimble
+dates: 09/2022 – 09/2023
+bullets:
+  - Developed and deployed advanced AI models — LLM-driven improvements to performance and efficiency
+  - Multi-spectral odometry and 3D point cloud registration
+  - Python for data ETL and analysis; deep learning with GAN and ResNet backbones
+  - Managed end-to-end ML model lifecycle from development to deployment
+  - Primary stakeholder on the Trimble XR-based Digital Twin Platform for 3D registration
+  - Multi-Sensor Input Odometry for autonomous guiding systems (e.g. Boston Dynamics Spot)
+
+---
+title: Senior Research Fellow
+org: Defence Research and Development Organization (DRDO)
+dates: 10/2017 – 07/2019
+bullets:
+  - Delivered modules for Illumination Normalization and Thermal Image Colorization under DRDO grant 2535/DIPR-II/MD/CARS-01
+  - Published across SCI journals, international, and national conferences with eminent national and international collaborators
+  - Generative AI, Deep Learning, and Computer Vision — including open-source dataset releases
+
+---
+title: Junior Research Fellow
+org: Defence Research and Development Organization (DRDO)
+dates: 01/2014 – 10/2015
+bullets:
+  - Developed and deployed performance evaluation metrics for the intra-DRDO network, DRONA
+  - Cross-collaborative work with statisticians and psychologists — new evaluation scale development
+  - R&D at Defence Institute of Psychological Research (DIPR), New Delhi

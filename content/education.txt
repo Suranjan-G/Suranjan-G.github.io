@@ -1,0 +1,17 @@
+# Education — one block per degree. Top of file = most recent.
+#
+# Fields:
+#   degree       e.g. "Ph.D., Computer Vision"
+#   dates        Completion date (MM/YYYY) or period
+#   institution  Institution name (inline _italic_ or **bold** allowed;
+#                append "· CGPA X.YZ" or grade info as free text)
+
+---
+degree: Ph.D., Computer Vision
+dates: 09/2025
+institution: Indian Institute of Information Technology (IIIT) — Prayagraj
+
+---
+degree: M.Tech, Computer Science Engineering
+dates: 06/2017
+institution: Institute of Engineering And Management — Kolkata · CGPA 8.25

@@ -1,0 +1,78 @@
+# Talks / Judging — content source
+#
+# HOW TO USE:
+#   - Each entry is a block between "---" lines. Order in this file = order
+#     on the rendered page (top = first / most prominent card).
+#   - Add or remove entries freely. Blank fields are fine — they get skipped.
+#   - After editing, run `python3 sync.py` from the site root to rebuild
+#     /talks/index.html (and every other page). No dependencies.
+#
+# FIELDS:
+#   type         "talk" or "judge"  — controls the small badge on the card
+#   title        Talk title, or role for judging (e.g. "Hackathon Judge")
+#   venue        Event / organiser + city, country
+#   date         YYYY-MM-DD, YYYY-MM, or any short string (shown verbatim)
+#   description  1–3 line description, plain text (can span multiple lines
+#                as long as they're indented — see examples below)
+#   media        Comma-separated filenames. All files go in
+#                /talks/images+videos/. Mix images and video clips freely.
+#                Extension controls the render: .jpg/.png/.webp → <img>,
+#                .mp4/.webm/.mov → <video>.
+#                Example: talk-nasiko-1.jpg, talk-nasiko-2.jpg, talk-nasiko-clip.mp4
+#                One filename = single item (no carousel controls).
+#                Two or more = auto-carousel with dots + counter + arrows.
+#   slides       URL to slides deck, or leave blank
+#   video        URL to external recording (e.g. YouTube), or leave blank
+#   event        URL to event page, or leave blank
+
+---
+type: talk
+title: Agents that actually ship, work: Building Observable Multi-Agent Systems with Gemini
+venue: AMD FragFest'26, Bengaluru
+date: 2026-06-25
+description: Insights from production to make sure an agent persists beyond a hobby
+media: DSC00946.JPG, DSC00948.JPG, DSC00972.JPG
+slides:
+video:
+event: https://respawn.outlookindia.com/gaming/gaming-news/amd-fragfest-26-combines-gaming-ai-and-esports-in-india
+---
+type: judge
+title: Hackathon Judge
+venue: Google Build with AI (Bangalore) - Vibe Coding Hackathon
+date: 2026-06-25
+description: Judge for around 30 teams for AI use cases built
+media: DSC01654.JPG, DSC01639.JPG, DSC01643.JPG, DSC01651.JPG
+slides:
+video:
+event: https://www.aicamp.ai/event/eventdetails/W2026062522
+---
+type: talk
+title: Agentic AI: The future of workplace
+venue: Unbound Creativity by HackBriven
+date: 2026-05-30
+description: What makes an Agentic system click: From observability and governance to production
+media: IMG_2991.HEIC
+slides:
+video:
+event: https://hackbriven.com/event/unbound-creativity-with-trae
+---
+type: judge
+title: Hackathon Judge
+venue: Unbound Creativity by HackBriven
+date: 2026-05-30
+description: Invited judge for Agentic AI usecases: real world impact
+media: IMG_3051.HEIC, IMG_3042.HEIC, IMG_3003.HEIC, IMG_3038.HEIC, 
+slides:
+video:
+event: https://luma.com/9htiuqkg
+---
+type: talk
+title: Vision language models and the effect of grounding in Indian context with reference to Indic Vision Bench
+venue: International Institute of Information Technology - Hyderabad (IIITH)
+date: 2026-03-312
+description: A lecture on how VLMs work and what culturally context driven training of VLMs should look like
+media: 1773829386577.jpeg
+slides:
+video:
+event: https://www.linkedin.com/posts/suranjan-goswami_iiith-precog-activity-7439979699197415424-hZFY?utm_source=share&utm_medium=member_desktop&rcm=ACoAABz4aJkB9vV3BOzsuge9zbsZ_k9DeWbNx38
+---
