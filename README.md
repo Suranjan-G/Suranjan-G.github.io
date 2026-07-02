@@ -21,6 +21,7 @@ Personal website. Plain HTML + CSS, generated from text sources by a single Pyth
   - [Adding new media](#adding-new-media)
 - [Local preview](#local-preview)
 - [Deploy to GitHub Pages](#deploy-to-github-pages)
+- [Alternative: host on `<username>.github.io` without a custom domain](#alternative-host-on-usernamegithubio-without-a-custom-domain)
 - [Extending the pipeline (new page / new section)](#extending-the-pipeline-new-page--new-section)
 
 ---
@@ -685,6 +686,86 @@ git push
 ```
 
 GitHub Pages auto-rebuilds within ~30–60 seconds of every push.
+
+---
+
+## Alternative: host on `<username>.github.io` without a custom domain
+
+If you don't own (or don't want to buy) a personal domain, you can publish the site directly to the free URL GitHub gives every account:
+
+```
+https://<your-github-username>.github.io/
+```
+
+That URL is yours forever, at no cost, with a valid HTTPS certificate automatically. Everything else in this project — `sync.py`, content editing, Cloudinary hosting, HTML output — works identically. The only differences are (1) skip the `CNAME` file, and (2) skip the DNS section entirely.
+
+### Differences from the custom-domain flow
+
+| | Custom domain (`suranjangoswami.com`)                        | GitHub URL (`<username>.github.io`)                     |
+|-|--------------------------------------------------------------|---------------------------------------------------------|
+| Repo name | Must be exactly `<username>.github.io` for user-site auto-publish | Same: `<username>.github.io`                       |
+| `CNAME` file | **Required** in repo root                                 | **Must NOT be in the repo** (or must be empty)        |
+| DNS setup | 4 A records + 1 CNAME at your registrar                     | None. Zero DNS configuration.                          |
+| HTTPS | Manually enable "Enforce HTTPS" after DNS propagates            | Automatic — HTTPS works out of the box, no toggle       |
+| Wait time to go live | 10–60 min for DNS propagation + cert                 | ~60 seconds after push                                 |
+| Cost | Domain registration (~$10-20/year) + email hosting if you want it | $0 forever                                             |
+
+### Steps
+
+1. **Delete the `CNAME` file** before your first push (it exists in this project because the primary deployment uses a custom domain):
+   ```bash
+   rm CNAME
+   ```
+
+2. **Adjust `.gitignore`** — the `CNAME` line isn't in `.gitignore`, so `rm` + commit is enough. If you'd rather preserve the file for future use, comment it out:
+   ```
+   # (empty CNAME file — restore your custom domain here if you ever buy one)
+   ```
+   An empty `CNAME` is treated the same as no `CNAME` — GitHub won't try to redirect.
+
+3. **Create the repo and push** (substitute your actual GitHub username):
+   ```bash
+   cd path/to/suranjangoswami.com
+   git init
+   git branch -M main
+   git config --local user.name "Your Name"
+   git config --local user.email "you@example.com"
+   git add .
+   git commit -m "Initial site"
+   gh repo create <your-username>.github.io --public --source=. --push
+   ```
+
+4. **Wait ~60 seconds**, then open:
+   ```
+   https://<your-username>.github.io/
+   ```
+   (GitHub lowercases the subdomain, so a username of `Jane-Doe` becomes `jane-doe.github.io`. Your profile URL keeps the original case.)
+
+5. **Verify build status** (optional):
+   ```bash
+   gh api "repos/<your-username>/<your-username>.github.io/pages" \
+     --jq '{status, custom_domain: .cname, https_enforced}'
+   ```
+   Expected: `status: built`, `custom_domain: null`, `https_enforced: true` (GitHub enforces HTTPS by default on `.github.io` URLs).
+
+### One-time content changes
+
+Because absolute paths in the HTML (`/styles.css`, `/about/`, `/talks/`) are served at the domain root, everything Just Works on `<username>.github.io/` — no path prefix rewriting needed. This is why user-site repos (named exactly `<username>.github.io`) are simpler than project-site repos (any other name), which would need `/<repo-name>/` prefixes everywhere.
+
+### If you buy a custom domain later
+
+You can switch from the free `.github.io` URL to a custom domain any time without breaking the existing URL — both will work in parallel until you set the primary one in Pages settings.
+
+1. Recreate the `CNAME` file with your new domain:
+   ```bash
+   echo "yourdomain.com" > CNAME
+   ```
+2. Follow the [Deploy to GitHub Pages](#deploy-to-github-pages) section from Step 3 (DNS records) onward.
+3. Your `<username>.github.io/` URL will start 301-redirecting to `https://yourdomain.com/` once the custom domain is configured.
+
+### Sharing the URL
+
+Some places you'd share the URL — GitHub profile, LinkedIn, CV, email signature, business cards. The `<username>.github.io` form works everywhere; you don't need to buy a domain just to have a shareable link.
 
 ---
 
