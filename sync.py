@@ -77,6 +77,16 @@ CREDENTIALS_FILE = ROOT / ".cloudinary"
 CLOUDINARY_IMG_TRANSFORM = "f_auto,q_auto"
 CLOUDINARY_VIDEO_TRANSFORM = "q_auto,f_auto"
 
+# Open Graph / Twitter card preview image. Same image used on every page
+# (LinkedIn, Twitter, Slack, etc. show this when the URL is shared).
+# Sized to 1200×630 (Facebook/LinkedIn recommended, ~1.91:1) via Cloudinary
+# transformations — no separate image file needed.
+#   c_fill  = crop to exact size
+#   g_auto  = smart gravity (Cloudinary picks the best crop focus)
+#   f_auto,q_auto = auto format + quality
+CLOUDINARY_OG_IMAGE_PUBLIC_ID = "talks/DSC00948"
+CLOUDINARY_OG_IMAGE_TRANSFORM = "w_1200,h_630,c_fill,g_auto,f_auto,q_auto"
+
 # Where sync.py stores the filename → public_id map. Committed to git so anyone
 # with the repo can build the site without re-uploading anything.
 CLOUDINARY_MANIFEST = ROOT / "talks" / "images+videos" / "manifest.json"
@@ -120,6 +130,21 @@ def cloudinary_url(public_id: str, kind: str) -> str:
         return ""
     tx = CLOUDINARY_IMG_TRANSFORM if kind == "image" else CLOUDINARY_VIDEO_TRANSFORM
     return f"https://res.cloudinary.com/{cn}/{kind}/upload/{tx}/{public_id}"
+
+
+def og_image_url() -> str:
+    """
+    URL for the Open Graph / Twitter preview image. Fixed dimensions 1200×630
+    via Cloudinary transforms — same image shared across every page's <head>.
+    Returns "" if cloud name is not configured.
+    """
+    cn = cloud_name()
+    if not cn:
+        return ""
+    return (
+        f"https://res.cloudinary.com/{cn}/image/upload/"
+        f"{CLOUDINARY_OG_IMAGE_TRANSFORM}/{CLOUDINARY_OG_IMAGE_PUBLIC_ID}"
+    )
 
 
 def media_src(filename: str, kind: str, manifest: dict) -> str:
@@ -292,6 +317,24 @@ AUTOGEN_WARNING = (
 def page_shell(title, description, canonical, active_href, main_html, profile,
                wide=False, extra_body=""):
     body_class = ' class="talks"' if wide else ""  # noqa (currently unused)
+    og_img = og_image_url()
+    og_block = ""
+    if og_img:
+        og_alt = f"{profile.get('name', '')} — {profile.get('tagline', '')}".strip(" —")
+        og_block = (
+            '  <meta property="og:type" content="website">\n'
+            f'  <meta property="og:url" content="{canonical}">\n'
+            f'  <meta property="og:title" content="{esc(title)}">\n'
+            f'  <meta property="og:description" content="{esc(description)}">\n'
+            f'  <meta property="og:image" content="{og_img}">\n'
+            '  <meta property="og:image:width" content="1200">\n'
+            '  <meta property="og:image:height" content="630">\n'
+            f'  <meta property="og:image:alt" content="{esc(og_alt)}">\n'
+            '  <meta name="twitter:card" content="summary_large_image">\n'
+            f'  <meta name="twitter:title" content="{esc(title)}">\n'
+            f'  <meta name="twitter:description" content="{esc(description)}">\n'
+            f'  <meta name="twitter:image" content="{og_img}">\n'
+        )
     return (
         '<!doctype html>\n'
         '<html lang="en">\n'
@@ -302,6 +345,7 @@ def page_shell(title, description, canonical, active_href, main_html, profile,
         f'  <meta name="description" content="{esc(description)}">\n'
         '  <link rel="stylesheet" href="/styles.css">\n'
         f'  <link rel="canonical" href="{canonical}">\n'
+        f'{og_block}'
         '</head>\n'
         '<body>\n'
         f'{AUTOGEN_WARNING}\n'
