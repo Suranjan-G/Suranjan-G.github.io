@@ -69,7 +69,7 @@ event: https://luma.com/9htiuqkg
 type: talk
 title: Vision language models and the effect of grounding in Indian context with reference to Indic Vision Bench
 venue: International Institute of Information Technology - Hyderabad (IIITH)
-date: 2026-03-312
+date: 2026-03-12
 description: A lecture on how VLMs work and what culturally context driven training of VLMs should look like
 media: 1773829386577.jpeg
 slides:
