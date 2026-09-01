@@ -1,4 +1,4 @@
-# Talks / Judging — content source
+# Events — content source
 #
 # HOW TO USE:
 #   - Each entry is a block between "---" lines. Order in this file = order
@@ -8,12 +8,13 @@
 #     /talks/index.html (and every other page). No dependencies.
 #
 # FIELDS:
-#   type         "talk" or "judge"  — controls the small badge on the card
+#   type         "talk", "panel", or "judge" — controls the small badge on the card
 #   title        Talk title, or role for judging (e.g. "Hackathon Judge")
 #   venue        Event / organiser + city, country
 #   date         YYYY-MM-DD, YYYY-MM, or any short string (shown verbatim)
-#   description  1–3 line description, plain text (can span multiple lines
-#                as long as they're indented — see examples below)
+#   description  1–3 sentence description, plain text. Keep it on ONE line:
+#                the parser reads `field: value` per line and ignores
+#                indented continuation lines.
 #   media        Comma-separated filenames. All files go in
 #                /talks/images+videos/. Mix images and video clips freely.
 #                Extension controls the render: .jpg/.png/.webp → <img>,
@@ -24,7 +25,19 @@
 #   slides       URL to slides deck, or leave blank
 #   video        URL to external recording (e.g. YouTube), or leave blank
 #   event        URL to event page, or leave blank
+#   post         URL to a LinkedIn (or other) post about the event, or leave blank
 
+---
+type: panel
+title: An AI agent for every Indian citizen: trust and delegation on India's DPI
+venue: DigiDoot Technology Roundtable, Accel LaunchPad, Bengaluru
+date: 2026-08-26
+description: Working session on personal citizen agents built over Aadhaar, UPI, and DigiLocker. We discussed an open, interoperable trust and delegation layer, and what consent, cost, and scale look like at a billion users.
+media: 1787768921493.png, 1787768921603.png
+slides:
+video:
+event:
+post: https://lnkd.in/p/gDPWgN9g
 ---
 type: talk
 title: Agents that actually ship, work: Building Observable Multi-Agent Systems with Gemini

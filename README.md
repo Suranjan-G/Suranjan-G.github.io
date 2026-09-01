@@ -11,7 +11,7 @@ Personal website. Plain HTML + CSS, generated from text sources by a single Pyth
   - [About page (`/about/`)](#about-page-about)
   - [Experience page (`/experience/`)](#experience-page-experience)
   - [Publications page (`/publications/`)](#publications-page-publications)
-  - [Talks / Judging page (`/talks/`)](#talks--judging-page-talks)
+  - [Events page (`/talks/`)](#events-page-talks)
   - [Site-wide elements (nav, footer, styles)](#site-wide-elements-nav-footer-styles)
   - [Social preview image (Open Graph)](#social-preview-image-open-graph)
 - [Inline formatting reference](#inline-formatting-reference)
@@ -41,7 +41,7 @@ Personal website. Plain HTML + CSS, generated from text sources by a single Pyth
 │   ├── skills.txt                 # Skill tag groups
 │   └── projects.txt               # Selected projects list
 ├── talks/
-│   ├── details.txt                # ✎  Talks/judging source (colocated w/ media)
+│   ├── details.txt                # ✎  Events source (colocated w/ media)
 │   ├── images+videos/             # ✎  Local staging area for originals (gitignored)
 │   │   ├── manifest.json          # ⚙  Filename → Cloudinary public_id map (committed)
 │   │   └── *.JPG / *.mp4 / ...    # ✎  Local originals (gitignored, live on Cloudinary)
@@ -319,29 +319,32 @@ citation: Goswami, Suranjan. IEEE Dataport, 2027. doi: [10.21227/xyz-1234](https
 
 ---
 
-### Talks / Judging page (`/talks/`)
+### Events page (`/talks/`)
+
+The page is titled "Events". The URL stays `/talks/` so existing links and the
+Cloudinary `talks/...` asset ids keep working.
 
 Rendered layout, top → bottom:
 
 1. Nav
-2. H1: "Talks / Judging"
+2. H1: "Events"
 3. Lead paragraph
-4. Grid of talk/judging cards, each with:
-   - Colored badge (TALK = navy, JUDGING = amber)
+4. Grid of event cards, each with:
+   - Colored badge (TALK = navy, PANEL = slate blue, JUDGING = amber)
    - Image / video carousel (swipe on mobile, arrows on hover on desktop, "1 / N" counter)
    - Title
    - Venue · Date line
    - Description
-   - Optional links row (Slides / Video / Event page)
+   - Optional links row (Slides / Video / Event page / LinkedIn post)
 5. Footer
 
 | Visible element                            | File → Field                                                    |
 |--------------------------------------------|-----------------------------------------------------------------|
-| Browser tab title                          | Auto: `Talks / Judging — {name}`                                |
+| Browser tab title                          | Auto: `Events — {name}`                                         |
 | SEO description                            | `content/profile.txt` → `talks_description:`                    |
 | Lead paragraph                             | `content/profile.txt` → `talks_lead:`                           |
 | Each card                                  | `talks/details.txt` → one `---` block per card                  |
-| TALK vs JUDGING badge                      | `talks/details.txt` → `type:` = `talk` or `judge`               |
+| TALK / PANEL / JUDGING badge               | `talks/details.txt` → `type:` = `talk`, `panel`, or `judge`     |
 | Card title                                 | `talks/details.txt` → `title:`                                  |
 | Venue (event + city/country)               | `talks/details.txt` → `venue:`                                  |
 | Date after the `·`                         | `talks/details.txt` → `date:` (any format, shown verbatim)      |
@@ -350,6 +353,7 @@ Rendered layout, top → bottom:
 | "Slides" link                              | `talks/details.txt` → `slides:`                                 |
 | "Video" link                               | `talks/details.txt` → `video:`                                  |
 | "Event page" link                          | `talks/details.txt` → `event:`                                  |
+| "LinkedIn post" link                       | `talks/details.txt` → `post:`                                   |
 
 **Rules for `media:`:**
 - Comma-separated list of filenames living in `talks/images+videos/`

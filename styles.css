@@ -397,6 +397,7 @@ footer a {
 }
 .talk-card .type-tag.talk { background: var(--accent); }
 .talk-card .type-tag.judge { background: #b8703a; }
+.talk-card .type-tag.panel { background: #5b6f8c; }
 
 .talk-card h3 {
   margin: 0 0 0.3rem 0;

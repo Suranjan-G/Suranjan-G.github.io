@@ -20,8 +20,9 @@ Reads
     content/awards.txt        — awards, certificates, hobbies
     content/skills.txt        — grouped skill tags (Domains / Tools / Hardware)
     content/projects.txt      — one-block file: bulleted list of selected projects
-    talks/details.txt         — talks and judging entries (colocated with the
-                                talks/images+videos/ folder for editing ergonomics)
+    talks/details.txt         — Events page entries: talks, panels, judging
+                                (colocated with the talks/images+videos/ folder
+                                for editing ergonomics)
     talks/images+videos/manifest.json
                               — filename → Cloudinary public_id map (committed;
                                 written by `sync.py --upload`; read on every build)
@@ -277,7 +278,7 @@ NAV_ITEMS = [
     ("About", "/about/"),
     ("Experience", "/experience/"),
     ("Publications", "/publications/"),
-    ("Talks / Judging", "/talks/"),
+    ("Events", "/talks/"),
 ]
 
 
@@ -651,7 +652,7 @@ def build_publications(profile: dict, pubs: list[dict]) -> str:
 
 
 # ============================================================
-# Page builder: Talks / Judging
+# Page builder: Events (talks, panels, judging)
 # ============================================================
 
 TALKS_GALLERY_SCRIPT = """  <script>
@@ -733,8 +734,8 @@ def build_talks(profile: dict, talks: list[dict], manifest: dict) -> str:
             filenames = [x.strip() for x in str(raw_media).split(",") if x.strip()]
         title = t.get("title", "")
         card_type = (t.get("type") or "talk").strip().lower()
-        badge_class = "judge" if card_type == "judge" else "talk"
-        badge_text = "Judging" if card_type == "judge" else "Talk"
+        badge_class = card_type if card_type in ("judge", "panel") else "talk"
+        badge_text = {"judge": "Judging", "panel": "Panel"}.get(card_type, "Talk")
         slides_html = "\n".join(
             render_slide(f, f"{title} — {i + 1}") for i, f in enumerate(filenames)
         )
@@ -745,7 +746,8 @@ def build_talks(profile: dict, talks: list[dict], manifest: dict) -> str:
 
         # Optional links
         link_bits = []
-        for key, label in [("slides", "Slides"), ("video", "Video"), ("event", "Event page")]:
+        for key, label in [("slides", "Slides"), ("video", "Video"),
+                           ("event", "Event page"), ("post", "LinkedIn post")]:
             url = (t.get(key) or "").strip()
             if url:
                 link_bits.append(f'            <a href="{esc(url)}">{label}</a>')
@@ -783,7 +785,7 @@ def build_talks(profile: dict, talks: list[dict], manifest: dict) -> str:
 
     main = (
         '  <main class="wide">\n'
-        '    <h1>Talks / Judging</h1>\n'
+        '    <h1>Events</h1>\n'
         f'    <p class="section-lead">{md_inline(profile.get("talks_lead", ""))}</p>\n\n'
         '    <div class="talks-grid">\n\n'
         f'{cards_html}\n\n'
@@ -791,7 +793,7 @@ def build_talks(profile: dict, talks: list[dict], manifest: dict) -> str:
         '  </main>\n'
     )
     return page_shell(
-        title=f"Talks / Judging — {profile.get('name', '')}",
+        title=f"Events — {profile.get('name', '')}",
         description=profile.get("talks_description", ""),
         canonical="https://suranjangoswami.com/talks/",
         active_href="/talks/",

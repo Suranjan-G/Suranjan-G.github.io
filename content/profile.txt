@@ -37,9 +37,9 @@ experience_lead: A decade across DRDO, Trimble, Ola Electric, and Nasiko — spa
 publications_description: Publications by Suranjan Goswami — ICLR 2026 (A*), Information Fusion 2025 (IF: 14.7), Pattern Recognition Letters 2020, and IEEE Dataport releases.
 publications_lead: Peer-reviewed papers, conference publications, and open datasets. Also on [Google Scholar](https://scholar.google.com/citations?user=N1s3fL4AAAAJ&hl=en).
 
-# ---- Talks page ----
-talks_description: Talks, invited lectures, and judging appearances by Suranjan Goswami.
-talks_lead: Invited talks, conference presentations, and events where I served as a judge.
+# ---- Events page ----
+talks_description: Events featuring Suranjan Goswami — talks, invited lectures, roundtables, and judging appearances.
+talks_lead: Invited talks, conference presentations, roundtables, and events where I served as a judge.
 
 # ---- Contact links (used on every page footer, home hero, etc.) ----
 email: suranjan_arcade@yahoo.co.in
