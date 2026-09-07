@@ -28,6 +28,17 @@
 #   post         URL to a LinkedIn (or other) post about the event, or leave blank
 
 ---
+type: talk
+title: Contain, Forecast, Adjudicate: Three Agent Controls No Protocol Gives You
+venue: Future of Data Bangalore, with Cloudera, Docker and Collabnix, Bengaluru
+date: 2026-09-05
+description: Two research results and one production control plane, with a live demo that runs locally. Containment as a policy selected by origin, forecasting of agent failures, and adjudication of what an agent is allowed to do.
+media: talk-futureofdata-2026-1.jpeg, talk-futureofdata-2026-2.jpeg, talk-futureofdata-2026-3.jpeg, talk-futureofdata-2026-4.jpeg
+slides:
+video:
+event: https://www.meetup.com/futureofdata-bangalore/events/316297027/
+post: https://lnkd.in/p/gyBrMZ-i
+---
 type: panel
 title: An AI agent for every Indian citizen: trust and delegation on India's DPI
 venue: DigiDoot Technology Roundtable, Accel LaunchPad, Bengaluru

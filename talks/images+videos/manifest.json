@@ -78,5 +78,25 @@
     "kind": "image",
     "public_id": "talks/IMG_3051",
     "sha256": "a61e8c20c61d037cd86530a773e90efedce77833b2c734683253acba723c9d90"
+  },
+  "talk-futureofdata-2026-1.jpeg": {
+    "kind": "image",
+    "public_id": "talks/talk-futureofdata-2026-1",
+    "sha256": "a35612b084d7971269f2936d85a8739eec5cb30abd9a3a58d076b98a81c848c6"
+  },
+  "talk-futureofdata-2026-2.jpeg": {
+    "kind": "image",
+    "public_id": "talks/talk-futureofdata-2026-2",
+    "sha256": "3cabc1580449afac4e9f17b1fc3eaccb92e9f5f5829aa21092416f164d66e9f2"
+  },
+  "talk-futureofdata-2026-3.jpeg": {
+    "kind": "image",
+    "public_id": "talks/talk-futureofdata-2026-3",
+    "sha256": "c3366ae769260742157df78571a9a2754c62931581451998618697561c94a1a1"
+  },
+  "talk-futureofdata-2026-4.jpeg": {
+    "kind": "image",
+    "public_id": "talks/talk-futureofdata-2026-4",
+    "sha256": "6ec52aa855c9e46734dbcc10c32310ab34286ae6421b3b0ffa0eb0b78fe93735"
   }
 }
