@@ -43,6 +43,7 @@ talks_lead: Invited talks, conference presentations, roundtables, and events whe
 
 # ---- Contact links (used on every page footer, home hero, etc.) ----
 email: suranjan_arcade@yahoo.co.in
+email_alt: mail@suranjangoswami.com
 linkedin: https://www.linkedin.com/in/suranjan-goswami/
 scholar: https://scholar.google.com/citations?user=N1s3fL4AAAAJ&hl=en
 dataport: https://ieee-dataport.org/authors/suranjan-goswami

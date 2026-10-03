@@ -389,7 +389,9 @@ def build_home(profile: dict) -> str:
         f'      <p>{md_inline(profile.get("hero_recent", ""))}</p>\n'
         '      <div class="contact-links">\n'
         f'        <a href="mailto:{esc(profile.get("email", ""))}">{esc(profile.get("email", ""))}</a>\n'
-        f'        <a href="{esc(profile.get("linkedin", ""))}">LinkedIn</a>\n'
+        + (f'        <a href="mailto:{esc(profile["email_alt"])}">{esc(profile["email_alt"])}</a>\n'
+           if profile.get("email_alt") else '')
+        + f'        <a href="{esc(profile.get("linkedin", ""))}">LinkedIn</a>\n'
         f'        <a href="{esc(profile.get("scholar", ""))}">Google Scholar</a>\n'
         f'        <a href="{esc(profile.get("dataport", ""))}">IEEE Dataport</a>\n'
         '      </div>\n'
